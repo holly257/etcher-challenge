@@ -9,9 +9,15 @@ $(() => {
 });
 
 
+$('.grid').bind('mouseover', '.cell', function(e){
+  $('.cell').addClass('active');
+  console.log(this);
+})
 
-
-
+$('.controls').on('click', function(e){
+  $('body').trigger('reset');
+  return createAndPlaceRows();
+})
 
 
 // ===============================
